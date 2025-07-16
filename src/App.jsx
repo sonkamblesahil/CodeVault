@@ -6,11 +6,9 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className="flex p-1 h-[89vh] gap-2 ">
-
       <LeftSideBar />
-
-      <MainContainer />
+      <div className="flex  h-max gap-2 pl-[20vw] pt-16 overflow-y-hidden">
+        <MainContainer />
       </div>
     </div>
   );
