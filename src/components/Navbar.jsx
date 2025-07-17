@@ -2,8 +2,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div
-      className="bg-white text-black flex fixed items-center justify-between h-20 p-3 top-0 left-0 w-full z-30 "
-    >
+      className="bg-white text-black flex fixed items-center justify-between h-20 p-3 top-0 left-0 w-full z-30 shadow-md border-b border-gray-200">
       <div
         className="right-nav w-1/2 flex items-center gap-4"
       >

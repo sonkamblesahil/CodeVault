@@ -9,6 +9,7 @@ function App() {
       <LeftSideBar />
       <div className="flex  h-max gap-2 pl-[20vw] pt-16 overflow-y-hidden">
         <MainContainer />
+  
       </div>
     </div>
   );

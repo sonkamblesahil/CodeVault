@@ -1,9 +1,11 @@
 import React from "react";
-import "./Cards.css"; // Assuming you have some styles for Cards
+import "./Cards.css"; 
+import ViewSolution from "./ViewSolution";
 const Cards = () => {
+  const [showSolution, setShowSolution] = React.useState(false);
   return (
     <div className="  bg-white p-4 rounded-2xl border border-gray-100 border-l-4 border-l-blue-500 shadow-md hover:shadow-md transition-shadow duration-300">
-      <div className="title flex items-center justify-between p-4 m-4">
+      <div className="title flex items-center justify-between py-3 m-4">
         <div className="flex items-center justify-between gap-3">
           <div className="text-lg font-semibold bg-blue-300 px-1 rounded-xl">
             #1
@@ -12,6 +14,10 @@ const Cards = () => {
           <button className="bg-green-200 text-green-400 font-bold px-3 py-1 text-sm rounded-xl">
             Easy
           </button>
+           <div className="description px-3 py-1 flex items-center text-blue-600 font-semibold font-sm hover:cursor-pointer hover:text-blue-800">
+        <img src="./src/icons/open.svg" alt="" />
+        <a href="#">View On LeetCode</a>
+      </div>
         </div>
 
         <div>
@@ -26,35 +32,29 @@ const Cards = () => {
           </button>
         </div>
       </div>
-      <div className="description p-3 flex items-center text-blue-600 font-semibold font-sm hover:cursor-pointer hover:text-blue-800">
-        <img src="./src/icons/open.svg" alt="" />
-        <a href="#">View On LeetCode</a>
-      </div>
+     
 
       <div className="flex flex-row gap-4 p-2 ">
         {/* Solution Code section */}
-        <div className="bg-white rounded-xl shadow-sm py-6 px-6 w-full md:w-1/2 h-max">
+        <div className="bg-white  py-2 px-6 w-full md:w-1/2 h-max">
           <div className="font-bold p-1 text-gray-800">
             <p>Solution Code</p>
           </div>
           {/* Code display area with hidden scrollbar */}
-          <div className="bg-gray-900 text-gray-100 rounded-md p-4 h-64 overflow-y-scroll custom-scrollbar-hide">
+          <div className="bg-gray-800 text-gray-100 rounded-md p-4 h-64 overflow-y-scroll custom-scrollbar-hide">
             <pre className="whitespace-pre-wrap text-sm">
               <code>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eligendi nostrum vel commodi dolorum, minima dolores saepe id esse quidem, quam, aut laborum blanditiis molestias nobis ipsum autem doloremque consequuntur quisquam modi! Quia asperiores saepe distinctio accusantium mollitia. Dolorum et inventore, ea minus libero illum qui harum similique modi consequatur cum impedit adipisci nesciunt odio vel soluta facilis, necessitatibus nam, enim dignissimos sint asperiores alias. Omnis quam quidem, architecto praesentium, quisquam dignissimos autem magnam aut deleniti obcaecati sed vitae quos quod ad illo amet delectus, corporis quas. Accusantium id animi, totam quam veniam at consequatur ad ut harum non cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ipsum quis unde nihil eos similique placeat cum, quod porro obcaecati beatae. Odio quibusdam, non accusamus fugit, nobis fuga quisquam magni porro obcaecati ratione eveniet ducimus, necessitatibus hic saepe consequuntur. Itaque.
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam id exercitationem debitis doloremque, autem totam sapiente officiis ducimus dolor vero voluptatem quam nobis eaque praesentium! Optio nisi laborum culpa doloremque tenetur quidem tempore incidunt minus, esse illum deleniti pariatur, quibusdam quas, facere asperiores dignissimos possimus impedit sed officia quasi laboriosam.
               </code>
             </pre>
           </div>
         </div>
-        <div className="bg-white rounded-xl p-4 shadow-sm w-1/2 max-w-2xl mx-auto mt-8">
-          <h3 className="text-xl font-semibold text-gray-800 mb-4">Notes</h3>
+        <div className="bg-white  px-4 py-1  w-1/2 max-w-2xl mx-auto mt-8">
+          <h3 className="text-xl font-semibold text-gray-800 mb-4 px-4 ">Notes</h3>
 
-          <div className="text-gray-700 mb-4 p-4 h-32 overflow-y-scroll custom-scrollbar-hide">
+          <div className="text-gray-700 mb-4 p-3 h-32 overflow-y-scroll custom-scrollbar-hide">
             <p className="mb-2 border border-gray-50 p-3 bg-gray-100 rounded-lg">
-              This solution uses a hash map to store the numbers we've seen so
-              far and their indices. For each number, we check if its complement
-              (target - current number) exists in the map. If it does, we've
-              found our pair.  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos quibusdam ipsam pariatur velit, a sed accusantium reiciendis, quaerat ab non eaque aut repudiandae totam eos doloremque dolore iusto consequuntur. Tempore odio ipsam voluptatibus magni, placeat dolore perspiciatis corporis. Unde, porro aut? Quod harum culpa doloribus fugit iste repudiandae, impedit amet? Minima nulla recusandae, suscipit perspiciatis amet adipisci similique repellat unde error aliquid temporibus hic nostrum eum tempore blanditiis quo autem voluptatum exercitationem! Adipisci neque quidem consequuntur officia facere, quibusdam pariatur vero iure distinctio natus quasi dolorem et labore error, nesciunt ratione ipsum non debitis, inventore quam dolores atque praesentium sit.
+              The Two Sum problem is a classic algorithmic challenge where you are given an array of integers and a target sum. The goal is to find two numbers in the array that add up to the target sum and return their indices.
             </p>
           </div>
             <div className="text-gray-600 text-m p-3">
@@ -74,8 +74,10 @@ const Cards = () => {
         </div>
       </div>
       <div className="flex justify-center mt-4 p-3">
-        <button className="text-blue-600 font-semibold hover:cursor-pointer ">View Full Solution</button>
+        <button className="text-blue-600 font-semibold hover:cursor-pointer  " onClick={()=>setShowSolution(true)}>View Full Solution</button>
       </div>
+      {showSolution && <ViewSolution setShowSolution={setShowSolution} /> }
+      
     </div>
   );
 };

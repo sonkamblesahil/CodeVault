@@ -1,5 +1,6 @@
-import React from "react";
+
 import Cards from "./Cards";
+import ViewSolution from "./ViewSolution";
 
 const MainContainer = () => {
   return (
@@ -16,6 +17,7 @@ const MainContainer = () => {
       <div className=" flex flex-col gap-10 p-4 bg-gray-100 rounded-2xl overflow-y-scroll">
         <Cards />
         <Cards />
+          
       </div>
 
     </div>
