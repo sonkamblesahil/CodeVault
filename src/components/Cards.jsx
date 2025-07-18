@@ -15,13 +15,13 @@ const Cards = () => {
             Easy
           </button>
            <div className="description px-3 py-1 flex items-center text-blue-600 font-semibold font-sm hover:cursor-pointer hover:text-blue-800">
-        <img src="./src/icons/open.svg" alt="" />
+        <img src="./src/icons/open.svg" className="hover:text-blue-500" alt="" />
         <a href="#">View On LeetCode</a>
       </div>
         </div>
 
         <div>
-          <button className=" text-white px-2 ml-2 rounded-xl hover:cursor-pointer">
+          <button className=" text-white px-2 ml-2 rounded-xl hover:cursor-pointer" onClick={()=>setShowSolution(true)}>
             <img src="./src/icons/view.svg" alt="" />
           </button>
           <button className=" text-white px-2 rounded-xl hover:cursor-pointer">
@@ -75,6 +75,9 @@ const Cards = () => {
       </div>
       <div className="flex justify-center mt-4 p-3">
         <button className="text-blue-600 font-semibold hover:cursor-pointer  " onClick={()=>setShowSolution(true)}>View Full Solution</button>
+      </div>
+      <div>
+        
       </div>
       {showSolution && <ViewSolution setShowSolution={setShowSolution} /> }
       

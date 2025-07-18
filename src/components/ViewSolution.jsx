@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ViewSolution({setShowSolution}) {
   return (
-    <div className=" inset-0 fixed  z-100  bg-opacity-50 backdrop-blur-sm items-center justify-center flex">
+    <div className=" inset-0 fixed  z-100  bg-opacity-50 backdrop-blur-sm items-center justify-center flex ">
       <div className="w-[80%] h-[80%] mx-auto bg-white rounded-xl shadow-lg p-8 relative">
         {/* Header */}
         <div className="flex justify-between items-center">

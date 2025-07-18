@@ -10,32 +10,7 @@ const Navbar = () => {
           <img src="./src/icons/logo.svg" className="h-14 w-14  " alt="logo" />
           <h1 className=" text-black text-3xl font-bold ml-2 hover:text-blue-600">CodeVault</h1>
         </div>
-        <div className="pb-{0.5rem}
-">
-          <ul className="flex gap-6 text-lg font-semibold items-center justify-center p-3">
-             <li className="group relative cursor-pointer">
-              <a href="#" className="focus:outline-none text-black ">                Home
-              </a>
-              <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full group-hover:left-0 group-focus:w-full group-focus:left-0"></span>
-            </li>
-            
-            <li className="group relative cursor-pointer">
-              <a href="#" className="focus:outline-none text-black ">
-                Solutions
-              </a>
-              <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full group-hover:left-0 group-focus:w-full group-focus:left-0"></span>
-            </li>
-
-            <li className="group relative cursor-pointer">
-              <a href="#" className="focus:outline-none text-black ">                Notes
-              </a>
-              <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full group-hover:left-0 group-focus:w-full group-focus:left-0"></span>
-            </li>
-
-          
-             
-          </ul>
-        </div>
+       
       </div>
       <div className="left-nav w-1/2 flex items-center p-3 justify-end gap-4">
         <div className="flex items-center gap-2">
