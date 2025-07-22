@@ -10,6 +10,14 @@ const Navbar = () => {
           <img src="./src/icons/logo.svg" className="h-14 w-14  " alt="logo" />
           <h1 className=" text-black text-3xl font-bold ml-2 hover:text-blue-600">CodeVault</h1>
         </div>
+        <div>
+          <ul className="flex items-center gap-6 font-semibold text-lg">
+            <li className="hover:text-blue-600 hover:cursor-pointer">Solutions</li>
+            <li className="hover:text-blue-600 hover:cursor-pointer">Notes</li>
+            <li className="hover:text-blue-600 hover:cursor-pointer">Resources</li>
+            <li className="hover:text-blue-600 hover:cursor-pointer">About Us</li>
+          </ul> 
+        </div>
        
       </div>
       <div className="left-nav w-1/2 flex items-center p-3 justify-end gap-4">
